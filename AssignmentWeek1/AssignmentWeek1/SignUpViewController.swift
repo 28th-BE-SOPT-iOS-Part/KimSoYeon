@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -18,23 +18,27 @@ class AccountViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         idTextField.placeholder = "이메일 또는 전화번호"
-        pwTextField.placeholder = "비밀번호"
-        pwCheckTextField.placeholder = "비밀번호 확인"
         
+        pwTextField.placeholder = "비밀번호"
         pwTextField.isSecureTextEntry = true
+        
+        pwCheckTextField.placeholder = "비밀번호 확인"
         pwCheckTextField.isSecureTextEntry = true
     }
     
     // 카카오 계정 만들기 버튼 클릭
     @IBAction func createBtn(_ sender: Any) {
+        if idTextField.text!.isEmpty || pwTextField.text!.isEmpty || pwCheckTextField.text!.isEmpty {
+            return
+        }
+        
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else {return}
         
         nextVC.userID = idTextField.text
         nextVC.modalPresentationStyle = .fullScreen
-        
-        if idTextField.text?.isEmpty == false && pwTextField.text?.isEmpty == false {
-            self.present(nextVC, animated: true, completion: nil)
-        } else {  }
+        present(nextVC, animated: true) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     /*

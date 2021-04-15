@@ -14,7 +14,6 @@ class ConfirmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         setUserIDLabel()
     }
@@ -27,29 +26,12 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func confirmBtn(_ sender: Any) {
-        
-/*
         guard let presentingVC = self.presentingViewController else { return }
+        
         let navigationController = presentingVC is UINavigationController ? presentingVC as? UINavigationController : presentingVC.navigationController
         self.dismiss(animated: true) {
             navigationController?.popToRootViewController(animated: false)
         }
- */
-        let vc1 = self.presentingViewController
-        self.dismiss(animated: true) {
-            guard let mainVC = vc1 as? UINavigationController else { return }
-            mainVC.popToRootViewController(animated: false)
-        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

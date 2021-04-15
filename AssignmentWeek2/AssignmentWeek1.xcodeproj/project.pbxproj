@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9204311626260EAE00783ED5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9204311526260EAE00783ED5 /* UITextField.swift */; };
+		924F09F9262696EB00E19EDE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F09F8262696EB00E19EDE /* HomeViewController.swift */; };
 		92572A76261978E5008D73C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572A75261978E5008D73C3 /* AppDelegate.swift */; };
 		92572A78261978E5008D73C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572A77261978E5008D73C3 /* SceneDelegate.swift */; };
 		92572A7A261978E5008D73C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572A79261978E5008D73C3 /* ViewController.swift */; };
@@ -17,6 +19,12 @@
 		92572A98261978E6008D73C3 /* AssignmentWeek1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572A97261978E6008D73C3 /* AssignmentWeek1UITests.swift */; };
 		92572AAE26197D24008D73C3 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572AAD26197D24008D73C3 /* ConfirmViewController.swift */; };
 		92572AB626197D95008D73C3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92572AB526197D95008D73C3 /* SignUpViewController.swift */; };
+		9286104A2622A2E1006A1CC7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928610492622A2E1006A1CC7 /* ProfileViewController.swift */; };
+		928610552622A863006A1CC7 /* KakaoMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928610542622A863006A1CC7 /* KakaoMain.storyboard */; };
+		928610602622AACC006A1CC7 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9286105F2622AACC006A1CC7 /* Chat.storyboard */; };
+		928610752622B8FE006A1CC7 /* HashTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928610742622B8FE006A1CC7 /* HashTag.storyboard */; };
+		9286107A2622B921006A1CC7 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928610792622B921006A1CC7 /* Shopping.storyboard */; };
+		9286107F2622B934006A1CC7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9286107E2622B934006A1CC7 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9204311526260EAE00783ED5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITextField.swift; path = AssignmentWeek1/Sources/Extensions/UITextField.swift; sourceTree = SOURCE_ROOT; };
+		924F09F8262696EB00E19EDE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../../../HomeViewController.swift; sourceTree = "<group>"; };
 		92572A72261978E5008D73C3 /* AssignmentWeek1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentWeek1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92572A75261978E5008D73C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92572A77261978E5008D73C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,12 @@
 		92572A99261978E6008D73C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92572AAD26197D24008D73C3 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		92572AB526197D95008D73C3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		928610492622A2E1006A1CC7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		928610542622A863006A1CC7 /* KakaoMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KakaoMain.storyboard; sourceTree = "<group>"; };
+		9286105F2622AACC006A1CC7 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		928610742622B8FE006A1CC7 /* HashTag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HashTag.storyboard; sourceTree = "<group>"; };
+		928610792622B921006A1CC7 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		9286107E2622B934006A1CC7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9204310A2626081000783ED5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9204311426260E5000783ED5 /* Extensions */,
+				920431102626085100783ED5 /* VCs */,
+				92572A75261978E5008D73C3 /* AppDelegate.swift */,
+				92572A77261978E5008D73C3 /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9204310B2626081700783ED5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9204310C2626082500783ED5 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9204310C2626082500783ED5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92572A80261978E5008D73C3 /* LaunchScreen.storyboard */,
+				92572A7B261978E5008D73C3 /* Main.storyboard */,
+				928610542622A863006A1CC7 /* KakaoMain.storyboard */,
+				9286105F2622AACC006A1CC7 /* Chat.storyboard */,
+				928610742622B8FE006A1CC7 /* HashTag.storyboard */,
+				928610792622B921006A1CC7 /* Shopping.storyboard */,
+				9286107E2622B934006A1CC7 /* Setting.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		920431102626085100783ED5 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				92572A79261978E5008D73C3 /* ViewController.swift */,
+				924F09F8262696EB00E19EDE /* HomeViewController.swift */,
+				92572AB526197D95008D73C3 /* SignUpViewController.swift */,
+				92572AAD26197D24008D73C3 /* ConfirmViewController.swift */,
+				928610492622A2E1006A1CC7 /* ProfileViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		9204311426260E5000783ED5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9204311526260EAE00783ED5 /* UITextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		92572A69261978E5008D73C3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +172,10 @@
 		92572A74261978E5008D73C3 /* AssignmentWeek1 */ = {
 			isa = PBXGroup;
 			children = (
-				92572A75261978E5008D73C3 /* AppDelegate.swift */,
-				92572A77261978E5008D73C3 /* SceneDelegate.swift */,
-				92572A79261978E5008D73C3 /* ViewController.swift */,
-				92572A7B261978E5008D73C3 /* Main.storyboard */,
-				92572AB526197D95008D73C3 /* SignUpViewController.swift */,
-				92572AAD26197D24008D73C3 /* ConfirmViewController.swift */,
 				92572A7E261978E5008D73C3 /* Assets.xcassets */,
-				92572A80261978E5008D73C3 /* LaunchScreen.storyboard */,
 				92572A83261978E5008D73C3 /* Info.plist */,
+				9204310B2626081700783ED5 /* Resources */,
+				9204310A2626081000783ED5 /* Sources */,
 			);
 			path = AssignmentWeek1;
 			sourceTree = "<group>";
@@ -239,6 +303,11 @@
 			files = (
 				92572A82261978E5008D73C3 /* LaunchScreen.storyboard in Resources */,
 				92572A7F261978E5008D73C3 /* Assets.xcassets in Resources */,
+				9286107A2622B921006A1CC7 /* Shopping.storyboard in Resources */,
+				928610752622B8FE006A1CC7 /* HashTag.storyboard in Resources */,
+				9286107F2622B934006A1CC7 /* Setting.storyboard in Resources */,
+				928610602622AACC006A1CC7 /* Chat.storyboard in Resources */,
+				928610552622A863006A1CC7 /* KakaoMain.storyboard in Resources */,
 				92572A7D261978E5008D73C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +336,10 @@
 				92572AAE26197D24008D73C3 /* ConfirmViewController.swift in Sources */,
 				92572AB626197D95008D73C3 /* SignUpViewController.swift in Sources */,
 				92572A7A261978E5008D73C3 /* ViewController.swift in Sources */,
+				924F09F9262696EB00E19EDE /* HomeViewController.swift in Sources */,
+				9204311626260EAE00783ED5 /* UITextField.swift in Sources */,
 				92572A76261978E5008D73C3 /* AppDelegate.swift in Sources */,
+				9286104A2622A2E1006A1CC7 /* ProfileViewController.swift in Sources */,
 				92572A78261978E5008D73C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

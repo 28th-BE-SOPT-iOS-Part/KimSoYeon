@@ -25,9 +25,8 @@ class ViewController: UIViewController {
     @IBAction func loginBtn(_ sender: Any) {
         if idTextField.text!.isEmpty || pwTextField.text!.isEmpty { return }
         
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "UITabBarController") as? UITabBarController else { return }
         
-        nextVC.userID = idTextField.text
         nextVC.modalPresentationStyle = .fullScreen
         
         present(nextVC, animated: true, completion: nil)
