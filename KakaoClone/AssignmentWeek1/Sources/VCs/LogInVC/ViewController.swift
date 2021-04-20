@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         idTextField.placeholder = "이메일 또는 전화번호"
+        idTextField.setTextFieldUnderLine()
         
         pwTextField.placeholder = "비밀번호"
         pwTextField.isSecureTextEntry = true
+        pwTextField.setTextFieldUnderLine()
     }
     
     // 카카오계정 로그인 버튼 클릭

@@ -17,11 +17,15 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         idTextField.placeholder = "이메일 또는 전화번호"
+        idTextField.setTextFieldUnderLine()
+        
         pwTextField.placeholder = "비밀번호"
         pwTextField.isSecureTextEntry = true
+        pwTextField.setTextFieldUnderLine()
         
         pwCheckTextField.placeholder = "비밀번호 확인"
         pwCheckTextField.isSecureTextEntry = true
+        pwCheckTextField.setTextFieldUnderLine()
     }
     
     // 카카오 계정 만들기 버튼 클릭
