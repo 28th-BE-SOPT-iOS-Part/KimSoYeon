@@ -22,7 +22,13 @@
 		928610602622AACC006A1CC7 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9286105F2622AACC006A1CC7 /* Chat.storyboard */; };
 		928610752622B8FE006A1CC7 /* HashTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928610742622B8FE006A1CC7 /* HashTag.storyboard */; };
 		9286107A2622B921006A1CC7 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928610792622B921006A1CC7 /* Shopping.storyboard */; };
-		9286107F2622B934006A1CC7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9286107E2622B934006A1CC7 /* Setting.storyboard */; };
+		9286107F2622B934006A1CC7 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9286107E2622B934006A1CC7 /* More.storyboard */; };
+		9287E14F263EEB300022A66B /* FriendDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E14E263EEB300022A66B /* FriendDataModel.swift */; };
+		9287E154263EED290022A66B /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E153263EED290022A66B /* FriendListCell.swift */; };
+		9287E157263EED4B0022A66B /* MyProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E156263EED4B0022A66B /* MyProfileCell.swift */; };
+		9287E15C263EF9EA0022A66B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E15B263EF9EA0022A66B /* MoreViewController.swift */; };
+		9287E16E263F11A60022A66B /* MoreListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E16D263F11A60022A66B /* MoreListCollectionViewCell.swift */; };
+		9287E171263F14D30022A66B /* MoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9287E170263F14D30022A66B /* MoreDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +49,13 @@
 		9286105F2622AACC006A1CC7 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		928610742622B8FE006A1CC7 /* HashTag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HashTag.storyboard; sourceTree = "<group>"; };
 		928610792622B921006A1CC7 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
-		9286107E2622B934006A1CC7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		9286107E2622B934006A1CC7 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		9287E14E263EEB300022A66B /* FriendDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataModel.swift; sourceTree = "<group>"; };
+		9287E153263EED290022A66B /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		9287E156263EED4B0022A66B /* MyProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileCell.swift; sourceTree = "<group>"; };
+		9287E15B263EF9EA0022A66B /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		9287E16D263F11A60022A66B /* MoreListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreListCollectionViewCell.swift; sourceTree = "<group>"; };
+		9287E170263F14D30022A66B /* MoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +72,10 @@
 		9204310A2626081000783ED5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9287E14C263EE4A30022A66B /* Cells */,
+				9229F276262EE57F0087CC72 /* Models */,
 				9204311426260E5000783ED5 /* Extensions */,
 				920431102626085100783ED5 /* VCs */,
-				92572A75261978E5008D73C3 /* AppDelegate.swift */,
-				92572A77261978E5008D73C3 /* SceneDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -118,7 +130,7 @@
 				9286105F2622AACC006A1CC7 /* Chat.storyboard */,
 				928610742622B8FE006A1CC7 /* HashTag.storyboard */,
 				928610792622B921006A1CC7 /* Shopping.storyboard */,
-				9286107E2622B934006A1CC7 /* Setting.storyboard */,
+				9286107E2622B934006A1CC7 /* More.storyboard */,
 			);
 			path = KakaoSB;
 			sourceTree = "<group>";
@@ -138,8 +150,20 @@
 			children = (
 				924F09F8262696EB00E19EDE /* HomeViewController.swift */,
 				928610492622A2E1006A1CC7 /* ProfileViewController.swift */,
+				9287E15B263EF9EA0022A66B /* MoreViewController.swift */,
 			);
 			path = KakaoVC;
+			sourceTree = "<group>";
+		};
+		9229F276262EE57F0087CC72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92572A75261978E5008D73C3 /* AppDelegate.swift */,
+				92572A77261978E5008D73C3 /* SceneDelegate.swift */,
+				9287E14E263EEB300022A66B /* FriendDataModel.swift */,
+				9287E170263F14D30022A66B /* MoreDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		92572A69261978E5008D73C3 = {
@@ -167,6 +191,16 @@
 				9204310A2626081000783ED5 /* Sources */,
 			);
 			path = AssignmentWeek1;
+			sourceTree = "<group>";
+		};
+		9287E14C263EE4A30022A66B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9287E156263EED4B0022A66B /* MyProfileCell.swift */,
+				9287E153263EED290022A66B /* FriendListCell.swift */,
+				9287E16D263F11A60022A66B /* MoreListCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +264,7 @@
 				92572A7F261978E5008D73C3 /* Assets.xcassets in Resources */,
 				9286107A2622B921006A1CC7 /* Shopping.storyboard in Resources */,
 				928610752622B8FE006A1CC7 /* HashTag.storyboard in Resources */,
-				9286107F2622B934006A1CC7 /* Setting.storyboard in Resources */,
+				9286107F2622B934006A1CC7 /* More.storyboard in Resources */,
 				928610602622AACC006A1CC7 /* Chat.storyboard in Resources */,
 				928610552622A863006A1CC7 /* KakaoMain.storyboard in Resources */,
 				92572A7D261978E5008D73C3 /* Main.storyboard in Resources */,
@@ -246,10 +280,16 @@
 			files = (
 				92572AAE26197D24008D73C3 /* ConfirmViewController.swift in Sources */,
 				92572AB626197D95008D73C3 /* SignUpViewController.swift in Sources */,
+				9287E16E263F11A60022A66B /* MoreListCollectionViewCell.swift in Sources */,
 				92572A7A261978E5008D73C3 /* ViewController.swift in Sources */,
 				924F09F9262696EB00E19EDE /* HomeViewController.swift in Sources */,
+				9287E14F263EEB300022A66B /* FriendDataModel.swift in Sources */,
+				9287E171263F14D30022A66B /* MoreDataModel.swift in Sources */,
 				9204311626260EAE00783ED5 /* UITextField.swift in Sources */,
 				92572A76261978E5008D73C3 /* AppDelegate.swift in Sources */,
+				9287E157263EED4B0022A66B /* MyProfileCell.swift in Sources */,
+				9287E154263EED290022A66B /* FriendListCell.swift in Sources */,
+				9287E15C263EF9EA0022A66B /* MoreViewController.swift in Sources */,
 				9286104A2622A2E1006A1CC7 /* ProfileViewController.swift in Sources */,
 				92572A78261978E5008D73C3 /* SceneDelegate.swift in Sources */,
 			);

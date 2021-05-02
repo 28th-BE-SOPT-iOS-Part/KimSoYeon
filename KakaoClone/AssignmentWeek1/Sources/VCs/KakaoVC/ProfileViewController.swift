@@ -8,10 +8,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeDownToDismiss()
+        
+        
     }
     
     @IBAction func closeBtnClicked(_ sender: Any) {
