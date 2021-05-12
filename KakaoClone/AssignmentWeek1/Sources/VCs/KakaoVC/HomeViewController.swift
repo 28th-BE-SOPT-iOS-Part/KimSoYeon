@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func settingButtonTouchUp(_ sender: Any) {
-        let alertController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "편집", style: .default, handler: nil))
         alertController.addAction(UIAlertAction(title: "친구 관리", style: .default, handler: nil))
         alertController.addAction(UIAlertAction(title: "전체 설정", style: .default, handler: nil))
@@ -123,6 +123,14 @@ extension HomeViewController : UITableViewDataSource {
 }
 
 extension HomeViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ProfileViewController") as? ProfileViewController else { return }
+
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
+    }
+    
+    // MARK: -swipe
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title:  "차단", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             success(true)
@@ -133,10 +141,19 @@ extension HomeViewController : UITableViewDelegate {
         return UISwipeActionsConfiguration(actions:[deleteAction,shareAction])
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ProfileViewController") as? ProfileViewController else { return }
-
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: true, completion: nil)
-    }
+    // MARK: -preview profile
+    
+//    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+//        let favorite = UIAction(title: "채팅하기") {_ in }
+//        let share = UIAction(title: "보이스톡") {_ in }
+//        let delete = UIAction(title: "페이스톡") {_ in }
+//        let delete2 = UIAction(title: "선물하기") {_ in }
+//        
+//        self.userName = friendList[indexPath.row].name
+//        
+//        return UIContextMenuConfiguration(identifier: nil, previewProvider: makeImagePreview) { _ in
+//            UIMenu(title: "", children: [favorite, share, delete, delete2])
+//        }
+//    }
+        
 }

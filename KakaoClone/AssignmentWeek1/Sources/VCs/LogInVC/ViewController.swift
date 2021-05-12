@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     
@@ -25,13 +26,37 @@ class ViewController: UIViewController {
     
     // 카카오계정 로그인 버튼 클릭
     @IBAction func loginBtn(_ sender: Any) {
-        if idTextField.text!.isEmpty || pwTextField.text!.isEmpty { return }
-        
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "UITabBarController") as? UITabBarController else { return }
-        
-        nextVC.modalPresentationStyle = .fullScreen
-        
-        present(nextVC, animated: true, completion: nil)
+        self.makeRequestAlert(title: "알림",
+                              message: "로그인을 하시겠습니까?",
+                              okAction: { _ in
+                                self.loginAction()
+                              })
+    }
+    
+    private func loginAction()
+    {
+        LoginService.shared.login(email: self.idTextField.text!, password: self.pwTextField.text!) { result in
+            switch result
+            {
+            case .success(let message):
+                if let message = message as? String{
+                    self.makeAlert(title: "알림",
+                                   message: message) { _ in
+                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "UITabBarController") as? UITabBarController else { return }
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.navigationController?.pushViewController(nextVC, animated: true)
+                    }
+                }
+                
+            case .requestErr(let message):
+                if let message = message as? String{
+                    self.makeAlert(title: "알림", message: message)
+                }
+    
+            default :
+                print("ERROR")
+            }
+        }
     }
     
     // 새로운 카카오계정 만들기 버튼 클릭

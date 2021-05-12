@@ -8,7 +8,7 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var pwCheckTextField: UITextField!
@@ -28,17 +28,38 @@ class SignUpViewController: UIViewController {
         pwCheckTextField.setTextFieldUnderLine()
     }
     
-    // 카카오 계정 만들기 버튼 클릭
+    
     @IBAction func createBtn(_ sender: Any) {
+        
         if idTextField.text!.isEmpty || pwTextField.text!.isEmpty || pwCheckTextField.text!.isEmpty {
+            
             return
         }
         
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "UITabBarController") as? UITabBarController else {return}
+        SignupService.shared.signup(email: self.idTextField.text!, password: self.pwTextField.text!) { result in
+            switch result
+            {
+            case .success(let message):
+                if let message = message as? String{
+                    self.makeAlert(title: "알림",
+                                   message: message) { _ in
+                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "UITabBarController") as? UITabBarController else {return}
+                        self.navigationController?.pushViewController(nextVC, animated: true)
+                    }
+                }
+                
+            case .requestErr(let message):
+                if let message = message as? String{
+                    self.makeAlert(title: "알림", message: message)
+                }
+                return
+                
+            default :
+                print("ERROR")
+            }
+        }
         
-        
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: true, completion: nil)
     }
-   
+
 }
+
